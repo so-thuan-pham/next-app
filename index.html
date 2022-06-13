@@ -11,7 +11,8 @@
         <script type="text/jsx">
             const app = document.getElementById('app');
 
-            function Header() {
+            function Header({props}) {
+                console.log(props) // { title: "React 💙" }
                 return <h1>Develop. Preview. Ship. 🚀</h1>;
             }
 
@@ -19,8 +20,7 @@
                 return (
                     <div>
                         {/* Nesting the Header component */}
-                        <Header />
-                        <Header />
+                        <Header title="React 💙" />
                     </div>
                 );
             }
